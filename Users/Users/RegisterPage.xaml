@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Users.RegisterPage">
+    <ContentPage.Content>
+        <Frame Style="{StaticResource StyleUsersMainFrame}">
+            <StackLayout>
+                <Label Text="Авторизация"
+                       HorizontalOptions="CenterAndExpand"/>
+                <Picker x:Name="pickerTypeUser" HorizontalTextAlignment="Center" Title="Выберите тип пользователя"/>
+                <Frame Style="{StaticResource StyleUsersLineFrame}"/>
+                <Label Text="Логин" HorizontalOptions="Center"/>
+                <Entry x:Name="fieldLogin" HorizontalTextAlignment="Center" Placeholder="Введите логин"/>
+                <Label Text="Пароль" HorizontalOptions="Center"/>
+                <Entry x:Name="fieldPassword" HorizontalTextAlignment="Center" Placeholder="Введите пароль" IsPassword="True"/>
+                <Label x:Name="labelError"/>
+                <Button x:Name="buttonRegister" Style="{StaticResource StyleUsersButton}" Clicked="buttonRegister_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

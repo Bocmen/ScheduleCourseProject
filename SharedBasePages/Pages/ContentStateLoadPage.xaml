@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Style="{StaticResource StyleContentPage}"
+             x:Class="SharedBasePages.Pages.ContentStateLoadPage"
+             Title="Состояние загрузки">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Подождите страницы загружаются" HorizontalTextAlignment="Center"/>
+            <ActivityIndicator IsRunning="true"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

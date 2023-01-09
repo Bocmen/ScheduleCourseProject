@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:table="clr-namespace:DatabaseUI.Views;assembly=DatabaseUI"
+             x:Class="SharedStyles.Styles">
+    <Color x:Key="BackgroundColor">#121212</Color>
+    <Color x:Key="ForegroundColor">#1e1e1e</Color>
+    <Color x:Key="ForegroundLayerTwoColor">#040b17</Color>
+
+    <Style x:Key="StyleContentPage" TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColor}"/>
+    </Style>
+    <Style TargetType="Button" x:Key="StyleButtonHeadTable_True">
+        <Setter Property="BackgroundColor" Value="#0b131a"/>
+        <Setter Property="CornerRadius" Value="0"/>
+    </Style>
+    <Style TargetType="Entry" x:Key="StyleEntryCellTable_True">
+        <Setter Property="BackgroundColor" Value="#252525"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+    </Style>
+    <Style TargetType="Button" x:Key="StyleButtonRowDrop_True">
+        <Setter Property="BackgroundColor" Value="#302112"/>
+        <Setter Property="Text" Value="Удалить"/>
+        <Setter Property="CornerRadius" Value="0"/>
+    </Style>
+    <Style TargetType="Label" x:Key="StyleLabelCellTable_True">
+        <Setter Property="BackgroundColor" Value="#1e1e1e"/>
+        <Setter Property="Margin" Value="1"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+    </Style>
+    <Style TargetType="Button">
+        <Setter Property="CornerRadius" Value="15"/>
+    </Style>
+
+    <Style TargetType="table:ViewSQLResulTable">
+        <Setter Property="StyleMainFrame">
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource ForegroundColor}"/>
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </Setter>
+        <Setter Property="StyleHeadFrame">
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource ForegroundLayerTwoColor}"/>
+                <Setter Property="Padding" Value="6"/>
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </Setter>
+        <Setter Property="StyleHeadButton">
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#2b2b2b"/>
+                <Setter Property="CornerRadius" Value="13"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="Padding" Value="12, 6"/>
+            </Style>
+        </Setter>
+        <Setter Property="StyleHeadLabel">
+            <Style TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+        </Setter>
+
+        <Setter Property="StyleGridTable">
+            <Style TargetType="Grid">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="ColumnSpacing" Value="0"/>
+                <Setter Property="RowSpacing" Value="0"/>
+                <Setter Property="BackgroundColor" Value="Gray"/>
+                <Setter Property="Padding" Value="0.5"/>
+            </Style>
+        </Setter>
+
+        <Setter Property="StyleButtonHeadTable_True" Value="{StaticResource StyleButtonHeadTable_True}"/>
+        <Setter Property="StyleButtonHeadTable_False">
+            <Style TargetType="Button" BasedOn="{StaticResource StyleButtonHeadTable_True}">
+                <Setter Property="BackgroundColor" Value="#1b646f"/>
+            </Style>
+        </Setter>
+
+        <Setter Property="StyleEntryCellTable_True" Value="{StaticResource StyleEntryCellTable_True}"/>
+        <Setter Property="StyleEntryCellTable_False">
+            <Style TargetType="Entry" BasedOn="{StaticResource StyleEntryCellTable_True}">
+                <Setter Property="BackgroundColor" Value="#2b4050"/>
+            </Style>
+        </Setter>
+
+        <Setter Property="StyleButtonRowDrop_True" Value="{StaticResource StyleButtonRowDrop_True}"/>
+        <Setter Property="StyleButtonRowDrop_False">
+            <Style TargetType="Button" BasedOn="{StaticResource StyleButtonRowDrop_True}">
+                <Setter Property="Text" Value="Восстановить"/>
+                <Setter Property="BackgroundColor" Value="#85815a"/>
+            </Style>
+        </Setter>
+
+        <Setter Property="StyleLabelCellTable_True" Value="{StaticResource StyleLabelCellTable_True}"/>
+        <Setter Property="StyleLabelCellTable_False">
+            <Style TargetType="Label" BasedOn="{StaticResource StyleLabelCellTable_True}">
+                <Setter Property="BackgroundColor" Value="#515151"/>
+                <Setter Property="Margin" Value="0, 1"/>
+                <Setter Property="TextColor" Value="#797979"/>
+            </Style>
+        </Setter>
+
+        <Setter Property="StyleFrameCellTable">
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#252525"/>
+                <Setter Property="CornerRadius" Value="0"/>
+                <Setter Property="Margin" Value="1"/>
+            </Style>
+        </Setter>
+
+        <Setter Property="StyleContentTable">
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#00000000"/>
+            </Style>
+        </Setter>
+
+        <Setter Property="StyleContentError">
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#3d1310"/>
+                <Setter Property="CornerRadius" Value="15"/>
+            </Style>
+        </Setter>
+        <Setter Property="StyleGridRowInsert">
+            <Style TargetType="Grid">
+                <Setter Property="ColumnDefinitions">
+                    <ColumnDefinitionCollection>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </ColumnDefinitionCollection>
+                </Setter>
+                <Setter Property="RowSpacing" Value="15"/>
+            </Style>
+        </Setter>
+        <Setter Property="StyleEntryRowInsert">
+            <Style TargetType="Entry" BasedOn="{StaticResource StyleEntryCellTable_True}">
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+        </Setter>
+        <Setter Property="StyleFrameRowInsert">
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#515151"/>
+                <Setter Property="CornerRadius" Value="6"/>
+            </Style>
+        </Setter>
+        <Setter Property="StyleLabelRowInsert">
+            <Style TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="Frame" x:Key="StyleUsersMainFrame">
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="WidthRequest" Value="300"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="CornerRadius" Value="15"/>
+        <Setter Property="BackgroundColor" Value="#1e1e1e"/>
+    </Style>
+    <Style TargetType="Frame" x:Key="StyleUsersLineFrame">
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="HeightRequest" Value="5"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="CornerRadius" Value="3"/>
+        <Setter Property="BackgroundColor" Value="#85815a"/>
+    </Style>
+    <Style TargetType="Button" x:Key="StyleUsersButton">
+        <Setter Property="Text" Value="Вход"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="BackgroundColor" Value="#040b17"/>
+    </Style>
+</ResourceDictionary>

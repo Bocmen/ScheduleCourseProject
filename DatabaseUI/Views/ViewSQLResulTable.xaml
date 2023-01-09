@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DatabaseUI.Views" x:DataType="local:ViewSQLResulTable"
+             x:Class="DatabaseUI.Views.ViewSQLResulTable">
+    <!--<ContentView.Style>
+        <Style TargetType="local:ViewSQLResulTable">
+            <Setter Property="StyleGridTable">
+                <Style TargetType="Grid">
+                    <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                    <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                    <Setter Property="ColumnSpacing" Value="0"/>
+                    <Setter Property="RowSpacing" Value="0"/>
+                    <Setter Property="BackgroundColor" Value="Black"/>
+                    <Setter Property="Padding" Value="0.5"/>
+                </Style>
+            </Setter>
+
+            <Setter Property="StyleFrameCellTable">
+                <Style TargetType="Frame">
+                    <Setter Property="CornerRadius" Value="0"/>
+                    <Setter Property="BackgroundColor" Value="White"/>
+                    <Setter Property="Margin" Value="1"/>
+                </Style>
+            </Setter>
+
+            <Setter Property="StyleButtonRowDrop_True">
+                <Style TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="#F4D6B0"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="Text" Value="Удалить"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleEntryCellTable_True">
+                <Style TargetType="Entry">
+                    <Setter Property="BackgroundColor" Value="White"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleButtonHeadTable_True">
+                <Style TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="White"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                </Style>
+            </Setter>
+
+            <Setter Property="StyleButtonRowDrop_False">
+                <Style TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="#A3C1AD"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="Text" Value="Удалить"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleEntryCellTable_False">
+                <Style TargetType="Entry">
+                    <Setter Property="BackgroundColor" Value="#F4D6B0"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleButtonHeadTable_False">
+                <Style TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="#F4D6B0"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                </Style>
+            </Setter>
+
+            <Setter Property="StyleLabelErrorMessage">
+                <Style TargetType="Label">
+                    <Setter Property="BackgroundColor" Value="Black"/>
+                    <Setter Property="TextColor" Value="White"/>
+                    <Setter Property="Padding" Value="10"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleLabelCellTable">
+                <Style TargetType="Label">
+                    <Setter Property="BackgroundColor" Value="White"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                    <Setter Property="VerticalTextAlignment" Value="Center"/>
+                    <Setter Property="Margin" Value="1"/>
+                </Style>
+            </Setter>
+
+            <Setter Property="StyleLabelRowInsert">
+                <Style TargetType="Label">
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                    <Setter Property="VerticalTextAlignment" Value="Center"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleEntryRowInsert">
+                <Style TargetType="Entry">
+                    <Setter Property="BackgroundColor" Value="White"/>
+                    <Setter Property="Margin" Value="3"/>
+                    <Setter Property="TextColor" Value="Black"/>
+                    <Setter Property="PlaceholderColor" Value="Gray"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleFrameRowInsert">
+                <Style TargetType="Frame">
+                    <Setter Property="BackgroundColor" Value="White"/>
+                    <Setter Property="CornerRadius" Value="8"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleGridRowInsert">
+                <Style TargetType="Grid">
+
+                </Style>
+            </Setter>
+
+            <Setter Property="StyleMainFrame">
+                <Style TargetType="Frame">
+                    <Setter Property="BackgroundColor" Value="Red"/>
+                    <Setter Property="Margin" Value="10"/>
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="CornerRadius" Value="15"/>
+                    <Setter Property="VerticalOptions" Value="Start"/>
+                    <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleHeadFrame">
+                <Style TargetType="Frame">
+                    <Setter Property="BackgroundColor" Value="Green"/>
+                    <Setter Property="Padding" Value="20, 5, 20, 5"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleHeadButton">
+                <Style TargetType="Button">
+                    <Setter Property="CornerRadius" Value="8"/>
+                    <Setter Property="MinimumWidthRequest" Value="30"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleHeadLabel">
+                <Style TargetType="Label">
+                    <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                    <Setter Property="VerticalTextAlignment" Value="Center"/>
+                </Style>
+            </Setter>
+
+            <Setter Property="StyleContentTable">
+                <Style TargetType="Frame">
+                    <Setter Property="BackgroundColor" Value="Yellow"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleContentError">
+                <Style TargetType="Frame">
+                    <Setter Property="BackgroundColor" Value="OrangeRed"/>
+                </Style>
+            </Setter>
+            <Setter Property="StyleContentInsert">
+                <Style TargetType="Frame">
+                    <Setter Property="BackgroundColor" Value="Gray"/>
+                </Style>
+            </Setter>
+        </Style>
+    </ContentView.Style>-->
+
+    <Frame Style="{Binding StyleMainFrame}">
+        <StackLayout Margin="10">
+            <Frame Style="{Binding StyleHeadFrame}">
+                <Grid Margin="0" Padding="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="reloadButton" Clicked="reloadButton_Clicked" Text="Обновить" Grid.Column="2" Style="{Binding StyleHeadButton}"/>
+                    <Button x:Name="updateButton" Clicked="updateButton_Clicked" Text="Зафиксировать изменения" Grid.Column="3" Style="{Binding StyleHeadButton}"/>
+                    <Label x:Name="fieldPageInfo" Text="Текущая страница" Grid.Column="4" Style="{Binding StyleHeadLabel}"/>
+                    <Button x:Name="pageApp" Clicked="pageApp_Clicked" Text="↓" Grid.Column="5" Style="{Binding StyleHeadButton}"/>
+                    <Button x:Name="pageDown" Clicked="pageDown_Clicked" Text="↑"  Grid.Column="6" Style="{Binding StyleHeadButton}"/>
+                    <Button x:Name="insertButton" Clicked="insertButton_Clicked" Text="Добавление данных" Grid.Column="1" Style="{Binding StyleHeadButton}"/>
+                </Grid>
+            </Frame>
+            <Frame x:Name="contentFrame">
+
+            </Frame>
+        </StackLayout>
+    </Frame>
+</ContentView>
